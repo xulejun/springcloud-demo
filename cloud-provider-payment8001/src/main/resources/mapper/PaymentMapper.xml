@@ -3,16 +3,17 @@
 
 <mapper namespace="com.xlj.springcloud.mapper.PaymentMapper">
 
+    <!--    useGeneratedKeys自动生成主键，keyProperty生成主键的字段-->
     <insert id="create" parameterType="com.xlj.springcloud.entities.Payment" useGeneratedKeys="true" keyProperty="id">
         insert into payment(serial) values (#{serial});
     </insert>
 
-    <select id="getPaymentById" resultMap="BaseResultMap" parameterType="Long">
+    <select id="getPaymentById" resultMap="BaseResultMap" parameterType="java.lang.Long">
         select * from payment where id = #{id};
     </select>
 
     <resultMap id="BaseResultMap" type="com.xlj.springcloud.entities.Payment">
         <id column="id" property="id" jdbcType="BIGINT"/>
-        <id column="serial" property="serial" javaType="VARCHAR"/>
+        <id column="serial" property="serial" jdbcType="VARCHAR"/>
     </resultMap>
 </mapper>
