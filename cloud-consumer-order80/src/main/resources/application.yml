@@ -11,4 +11,7 @@ eureka:
     # true将服务注册到eureka
     fetch-registry: true
     service-url:
-      defaultZone: http://localhost:7001/eureka
+      #      集群Eureka
+      defaultZone: http://eureka7001:7001/eureka,http://eureka7002:7002/eureka
+#      单机版Eureka
+#      defaultZone: http://localhost:7001/eureka

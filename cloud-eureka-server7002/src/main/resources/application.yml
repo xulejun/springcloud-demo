@@ -1,11 +1,16 @@
 server:
   port: 7002
 
+spring:
+  application:
+    #集群情况下，请保证application.name 相同，否则不可用（在eureka控制台unavailable-replicas中可以看到不可用的副本节点）
+    name: clusterEureka
+
 #双集群配置
 eureka:
   instance:
     #    eureka服务器的实例名称
-    hostname: eurek7002.com
+    hostname: eureka7002
   client:
     #    false表示不向注册中心注册自己
     register-with-eureka: false
@@ -13,4 +18,4 @@ eureka:
     fetch-registry: false
     service-url:
       #      设置与eureka server交互的地址查询服务和注册服务都需要依赖这个地址
-      deaultZone: http://eurek7001.com:7001/eureka/
+      defaultZone: http://eureka7001:7001/eureka/
