@@ -20,7 +20,12 @@ eureka:
     # true将服务注册到eureka
     fetch-registry: true
     service-url:
-#      集群Eureka
+      #      集群Eureka
       defaultZone: http://eureka7001:7001/eureka,http://eureka7002:7002/eureka
-#      单机版Eureka
-#      defaultZone: http://localhost:7001/eureka
+  #      单机版Eureka
+  #      defaultZone: http://localhost:7001/eureka
+  instance:
+    #    主机名称
+    instance-id: payment8002
+    #    访问路径显示地址
+    prefer-ip-address: true
