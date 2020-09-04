@@ -16,6 +16,7 @@
         <module>cloud-eureka-server7002</module>
         <module>cloud-provider-payment8002</module>
         <module>cloud-provider-payment8004</module>
+        <module>cloud-consumer-zkorder80</module>
     </modules>
 
     <!--  统一jar包管理-->
