@@ -1,0 +1,10 @@
+server:
+  port: 8004
+
+spring:
+  application:
+    name: cloud-payment-service
+  #  连接本地的zookeeper
+  cloud:
+    zookeeper:
+      connect-string: localhost:2181
