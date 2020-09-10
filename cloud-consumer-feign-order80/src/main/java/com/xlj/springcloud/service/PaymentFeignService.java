@@ -9,12 +9,17 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 
 /**
+ * OpenFeign调用提供者接口
  * @author XLJ
  * @date 2020/9/10
  */
 @Component
 @FeignClient(value = "CLOUD-PAYMENT-SERVICE")
 public interface PaymentFeignService {
+
     @GetMapping(value = "/payment/get/{id}")
     CommonResult<Payment> getPaymentById(@PathVariable("id") Long id);
+
+    @GetMapping(value = "/payment/feign/timeout")
+    String paymentFeignTimeOut();
 }

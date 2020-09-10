@@ -26,8 +26,10 @@ import java.util.List;
 public class OrderController {
     // 单机版ip端口固定
 //    public static final String PAYMENT_URL = "http://localhost:8001";
+
     // 集群版ip为注册服务名
     public static final String PAYMENT_URL = "http://CLOUD-PAYMENT-SERVICE";
+
     @Resource
     private RestTemplate restTemplate;
 
