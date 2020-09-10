@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 
-<mapper namespace="com.xlj.com.xlj.springcloud.mapper.PaymentMapper">
+<mapper namespace="com.xlj.springcloud.mapper.PaymentMapper">
 
     <!--    useGeneratedKeys自动生成主键，keyProperty生成主键的字段-->
     <insert id="create" parameterType="com.xlj.springcloud.entities.Payment" useGeneratedKeys="true" keyProperty="id">

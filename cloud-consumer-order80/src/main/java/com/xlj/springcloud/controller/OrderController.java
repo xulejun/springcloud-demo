@@ -64,6 +64,11 @@ public class OrderController {
         }
     }
 
+    /**
+     * @description: 自定义轮序算法调用
+     * @author XLJ
+     * @date 2020/9/10 11:10
+    */
     @GetMapping(value = "/comsumer/payment/lb")
     public String getPaymentLb(){
         List<ServiceInstance> instances = discoveryClient.getInstances("CLOUD-PAYMENT-SERVICE");
