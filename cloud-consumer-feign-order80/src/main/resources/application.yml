@@ -23,3 +23,9 @@ ribbon:
   ReadTimeout: 5000
   #  建立连接后服务端响应的时间
   ConnectTimeout: 5000
+
+logging:
+  level:
+    #    feign日志以什么级别监控哪个接口
+    com.xlj.springcloud.service.PaymentFeignService: debug
+
