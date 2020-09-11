@@ -11,7 +11,7 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
  */
 @SpringBootApplication
 @EnableEurekaClient
-@EnableCircuitBreaker
+@EnableCircuitBreaker   // 启动断路器
 public class PaymentHystrixMain8001 {
     public static void main(String[] args) {
         SpringApplication.run(PaymentHystrixMain8001.class,args);
