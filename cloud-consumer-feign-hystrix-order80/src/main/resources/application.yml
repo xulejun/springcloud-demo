@@ -1,0 +1,12 @@
+server:
+  port: 80
+
+eureka:
+  client:
+    register-with-eureka: false
+    # true将服务注册到eureka
+    service-url:
+      #      集群Eureka
+      defaultZone: http://eureka7001:7001/eureka,http://eureka7002:7002/eureka
+  #      单机版Eureka
+  #      defaultZone: http://localhost:7001/eureka
