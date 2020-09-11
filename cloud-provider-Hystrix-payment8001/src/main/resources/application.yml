@@ -1,0 +1,16 @@
+server:
+  port: 8001
+spring:
+  application:
+    name: cloud-payment-hystrix-service
+
+eureka:
+  client:
+    register-with-eureka: true
+    # true将服务注册到eureka
+    fetch-registry: true
+    service-url:
+      #      集群Eureka
+      defaultZone: http://eureka7001:7001/eureka,http://eureka7002:7002/eureka
+  #      单机版Eureka
+  #      defaultZone: http://localhost:7001/eureka

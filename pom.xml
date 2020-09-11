@@ -18,6 +18,7 @@
         <module>cloud-provider-payment8004</module>
         <module>cloud-consumer-zkorder80</module>
         <module>cloud-consumer-feign-order80</module>
+        <module>cloud-provider-Hystrix-payment8001</module>
     </modules>
 
     <!--  统一jar包管理-->
