@@ -50,23 +50,23 @@ public class PaymentService {
      * @description: 服务熔断
      * @author XLJ
      * @date 2020/9/11 17:10
-    */
-    @HystrixCommand(fallbackMethod = "paymentCircuitBreakerFallback",commandProperties = {
-            @HystrixProperty(name = "circuitBreaker.enabled",value = "true"),   // 开启断路器
-            @HystrixProperty(name = "circuitBreaker.requestVolumeThreshold",value = "10"),  // 请求次数
-            @HystrixProperty(name = "circuitBreaker.sleepWindowInMilliseconds",value = "10000"),    // 时间窗口期
-            @HystrixProperty(name = "circuitBreaker.errorThresholdPercentage",value = "60"),    // 失败率达到多少后跳闸
+     */
+    @HystrixCommand(fallbackMethod = "paymentCircuitBreakerFallback", commandProperties = {
+            @HystrixProperty(name = "circuitBreaker.enabled", value = "true"),   // 开启断路器
+            @HystrixProperty(name = "circuitBreaker.requestVolumeThreshold", value = "10"),  // 请求次数
+            @HystrixProperty(name = "circuitBreaker.sleepWindowInMilliseconds", value = "10000"),    // 时间窗口期
+            @HystrixProperty(name = "circuitBreaker.errorThresholdPercentage", value = "60"),    // 失败率达到多少后跳闸
     })
-    public String paymentCircuitBreaker(@PathVariable("id") Integer id){
-        if (id<0){
+    public String paymentCircuitBreaker(@PathVariable("id") Integer id) {
+        if (id < 0) {
             throw new RuntimeException("id不能为负数");
         }
         String uuid = IdUtil.simpleUUID();
-        return Thread.currentThread().getName()+"\t"+"调用成功，序列号为："+uuid;
+        return Thread.currentThread().getName() + "\t" + "调用成功，序列号为：" + uuid;
     }
 
-    public String paymentCircuitBreakerFallback(@PathVariable("id") Integer id){
-        return "当前调用降级处理方法，id不能为负数";
+    public String paymentCircuitBreakerFallback(@PathVariable("id") Integer id) {
+        return "当前调用服务熔断-降级处理方法，id不能为负数";
     }
 
 }
