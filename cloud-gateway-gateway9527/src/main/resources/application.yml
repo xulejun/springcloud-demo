@@ -23,7 +23,6 @@ spring:
 #            - Host=**.baidu.com   # 指定主机才可访问
 #            - Method=GET    # 请求方法为GET才生效
 
-
         - id: payment_routh2             # 路由的id，没有固定的规则但要求统一，建议配合服务名
 #          uri: http://localhost:8001    # 匹配后提供服务的  路由地址
           uri: lb://cloud-payment-service
