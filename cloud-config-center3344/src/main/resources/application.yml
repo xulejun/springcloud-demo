@@ -1,0 +1,22 @@
+server:
+  port: 3344
+
+spring:
+  application:
+    name: cloud-config-center
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/xulejun/springcloud-demo.git  # 对应的git仓库地址
+          search-paths:
+            - springcloud-config    # 搜索路径
+      label: test   # 读取分支
+
+eureka:
+  client:
+    service-url:
+      #      集群Eureka
+      defaultZone: http://eureka7001:7001/eureka,http://eureka7002:7002/eureka
+  #      单机版Eureka
+  #      defaultZone: http://localhost:7001/eureka
