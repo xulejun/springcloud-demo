@@ -11,7 +11,7 @@ spring:
           uri: https://github.com/xulejun/springcloud-demo.git  # 对应的git仓库地址
           search-paths:
             - springcloud-config    # 搜索路径
-      label: test   # 读取分支
+      label: master   # 读取分支
 
 eureka:
   client:
