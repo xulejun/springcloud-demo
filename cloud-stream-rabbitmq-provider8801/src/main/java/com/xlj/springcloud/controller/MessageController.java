@@ -17,6 +17,7 @@ public class MessageController {
 
     @GetMapping(value = "/sendMessage")
     public String sendMessage(){
-        return messageService.sendMessage();
+        System.out.println("uuid："+messageService.sendMessage());
+        return null;
     }
 }

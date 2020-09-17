@@ -17,7 +17,7 @@ import java.util.UUID;
 public class MessageServiceImpl implements MessageService {
 
     @Resource
-    private MessageChannel output;
+    private MessageChannel output;      // 消息管道
 
     @Override
     public String sendMessage() {
