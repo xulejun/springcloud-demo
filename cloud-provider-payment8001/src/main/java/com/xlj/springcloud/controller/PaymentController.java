@@ -80,4 +80,10 @@ public class PaymentController {
         }
         return serverPort;
     }
+
+    @GetMapping(value = "/payment/zipkin")
+    public String paymentZipkin(){
+        return "当前服务端口号："+serverPort+"调用zipkin成功";
+    }
+
 }
