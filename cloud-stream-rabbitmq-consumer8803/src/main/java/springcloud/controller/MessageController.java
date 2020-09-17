@@ -1,4 +1,4 @@
-package com.xlj.springcloud.controller;
+package springcloud.controller;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.stream.annotation.EnableBinding;
