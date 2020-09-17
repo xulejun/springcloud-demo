@@ -11,6 +11,13 @@ spring:
       name: config  # 配置文件名称
       profile: dev  # 读取后缀名名称
       uri: http://localhost:3344  # 配置中心地址    http://config3344:3344/test/config-dev.yml
+  # rabbitmq配置
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+
 
 eureka:
   client:

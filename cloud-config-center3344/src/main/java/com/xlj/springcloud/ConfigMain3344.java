@@ -12,7 +12,7 @@ import org.springframework.cloud.config.server.EnableConfigServer;
 @EnableConfigServer
 public class ConfigMain3344 {
     public static void main(String[] args) {
-        // http://config3344:3344/master/config-test.yml 访问远程git配置文件
+        // http://config3344:3344/master/config-dev.yml 访问远程git配置文件
         SpringApplication.run(ConfigMain3344.class, args);
     }
 }
