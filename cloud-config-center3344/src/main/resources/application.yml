@@ -27,6 +27,7 @@ eureka:
   #      单机版Eureka
   #      defaultZone: http://localhost:7001/eureka
 
+
 # 暴露rabbitmq刷新配置的端点
 management:
   endpoints:
