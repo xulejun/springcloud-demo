@@ -15,6 +15,14 @@ spring:
         port: 8719
         # 配置sentinel dashboard地址
         dashboard: localhost:8080
+      datasource:
+        ds1:
+          nacos:
+            server-addr: localhost:8848
+            dataId: cloudalibaba-sentinel-service
+            groupId: DEFAULT_GROUP
+            data-type: json
+            rule-type: flow
 
 # 暴露监控端点
 management:

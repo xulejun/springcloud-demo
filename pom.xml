@@ -33,6 +33,7 @@
         <module>cloudalibaba-nacos-consumer-order83</module>
         <module>cloudalibaba-nacos-config-client3377</module>
         <module>cloudalibaba-sentinel-service8401</module>
+        <module>seata-order-service2001</module>
     </modules>
 
     <!--  统一jar包管理-->
