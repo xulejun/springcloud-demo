@@ -20,7 +20,7 @@ public class OrderServiceImpl implements OrderService {
     @Resource
     private OrderDao orderDao;
     @Resource
-    private AccountSerivce accountSerivce;
+    private AccountSerivce accountService;
     @Resource
     private StorageService storageService;
 
@@ -32,17 +32,17 @@ public class OrderServiceImpl implements OrderService {
 
         // 2.扣减库存
         log.info("订单微服务开始调用库存，进行扣减Count");
-        storageService.decrease(order.getProductId(),order.getCount());
+        storageService.decrease(order.getProductId(), order.getCount());
         log.info("库存扣减结束");
 
         // 3.扣减账户
         log.info("订单微服务开始调用账户，进行扣减Money");
-        accountSerivce.decrease(order.getUserId(),order.getMoney());
+        accountService.decrease(order.getUserId(), order.getMoney());
         log.info("账户扣减结束");
 
         // 4.修改订单状态，从0改为1，代表已完成
         log.info("修改订单状态开始");
-        orderDao.update(order.getUserId(),0);
+        orderDao.update(order.getUserId(), 0);
         log.info("修改订单状态结束");
 
         log.info("订单结束");
