@@ -5,6 +5,8 @@ import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import java.math.BigDecimal;
+
 /**
  * @author XLJ
  * @date 2020/10/9
@@ -12,5 +14,5 @@ import org.springframework.web.bind.annotation.RequestParam;
 @FeignClient(value = "seata-account-service")
 public interface AccountSerivce {
     @PostMapping(value = "/account/decrease")
-    CommonResult decrease(@RequestParam("productId") Long productId, @RequestParam("count") Integer count);
+    CommonResult decrease(@RequestParam("userId") Long userId, @RequestParam("money") BigDecimal money);
 }
