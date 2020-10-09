@@ -5,6 +5,7 @@ import com.xlj.springcloud.domain.Order;
 import com.xlj.springcloud.service.AccountSerivce;
 import com.xlj.springcloud.service.OrderService;
 import com.xlj.springcloud.service.StorageService;
+import io.seata.spring.annotation.GlobalTransactional;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
@@ -25,6 +26,7 @@ public class OrderServiceImpl implements OrderService {
     private StorageService storageService;
 
     @Override
+    @GlobalTransactional(name = "test_create_order",rollbackFor = Exception.class)
     public void create(Order order) {
         // 1.新建订单
         log.info("开始创建订单");
